@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Should I Buy It?</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 30px;
+        color: #333;
+      }
+
+      form {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      input[type="submit"] {
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+      label {
+        position: relative;
+        color: #4189e0;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8em;
+        border: 3px solid #4189e0;
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+      }
+      input[type="radio"]:checked + label {
+        background-color: #4189e0;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Should I Buy It?</h1>
+    <form id="buyForm">
+      <h3>Have I thought about it for at least two weeks?</h3>
+      <input type="radio" id="q1_yes" name="q1" value="yes" />
+      <label for="q1_yes">Yes</label>
+      <input type="radio" id="q1_no" name="q1" value="no" />
+      <label for="q1_no">No</label>
+
+      <h3>Does it solve a problem that I've genuinely noticed?</h3>
+      <input type="radio" id="q2_yes" name="q2" value="yes" />
+      <label for="q2_yes">Yes</label>
+      <input type="radio" id="q2_no" name="q2" value="no" />
+      <label for="q2_no">No</label>
+
+      <h3>Do I already own something similar?</h3>
+      <input type="radio" id="q3_yes" name="q3" value="yes" />
+      <label for="q3_yes">No</label>
+      <input type="radio" id="q3_no" name="q3" value="no" />
+      <label for="q3_no">Yes</label>
+
+      <h3>Is buying it worth giving up progress towards my next financial goal?</h3>
+      <input type="radio" id="q4_yes" name="q4" value="yes" />
+      <label for="q4_yes">Yes</label>
+      <input type="radio" id="q4_no" name="q4" value="no" />
+      <label for="q4_no">No</label>
+
+      <h3>Where will it be in five Years?</h3>
+      <input type="radio" id="q5_yes" name="q5" value="yes" />
+      <label for="q5_yes">I Have A Place In Mind</label>
+      <input type="radio" id="q5_no" name="q5" value="no" />
+      <label for="q5_no">Not Sure</label>
+
+      <h3>How long will I have to work in order to pay for it?</h3>
+      <input type="radio" id="q6_yes" name="q6" value="yes" />
+      <label for="q6_yes">Not Very Long</label>
+      <input type="radio" id="q6_no" name="q6" value="no" />
+      <label for="q6_no">A Significant Amount of Time</label>
+
+      <h3>Can I be productive and happy without it?</h3>
+      <input type="radio" id="q7_yes" name="q7" value="yes" />
+      <label for="q7_yes">No</label>
+      <input type="radio" id="q7_no" name="q7" value="no" />
+      <label for="q7_no">Yes</label>
+      
+      <h3>What is the cost of it per use?</h3>
+      <input type="radio" id="q8_yes" name="q8" value="yes" />
+      <label for="q8_yes">Worth My Money</label>
+      <input type="radio" id="q8_no" name="q8" value="no" />
+      <label for="q8_no">Not Worth Much</label>
+
+      <h3>Does buying it supports my priorities?</h3>
+      <input type="radio" id="q9_yes" name="q9" value="yes" />
+      <label for="q9_yes">Yes</label>
+      <input type="radio" id="q9_no" name="q9" value="no" />
+      <label for="q9_no">No</label>
+
+      <h3>Is this the best way for me to obtain it?</h3>      
+      <input type="radio" id="q10_yes" name="q10" value="yes" />
+      <label for="q10_yes">Yes</label>
+      <input type="radio" id="q10_no" name="q10" value="no" />
+      <label for="q10_no">No</label>
+
+      <h3>Is it a high-quality item with a reasonable price tag?</h3>
+      <input type="radio" id="q11_yes" name="q11" value="yes" />
+      <label for="q11_yes">Yes</label>
+      <input type="radio" id="q11_no" name="q11" value="no" />
+      <label for="q11_no">No</label>
+
+      <h3>What is my current mental state?</h3>
+      <input type="radio" id="q12_yes" name="q12" value="yes" />
+      <label for="q12_yes">Calm and Neutral</label>
+      <input type="radio" id="q12_no" name="q12" value="no" />
+      <label for="q12_no">Altered by Internal or External Forces</label>
+
+      <h3>What is the real reason I'm considering buying it?</h3>
+      <input type="radio" id="q13_yes" name="q13" value="yes" />
+      <label for="q13_yes">An Intentional Reason</label>
+      <input type="radio" id="q13_no" name="q13" value="no" />
+      <label for="q13_no">An Impulsive Reason</label>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      document
+        .getElementById("buyForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let buyCount = 0;
+          let dontBuyCount = 0;
+
+          // Count "BUY" and "DON'T BUY" answers
+          if (document.getElementById("q1_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+
+          if (document.getElementById("q2_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+
+          if (document.getElementById("q3_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+
+          if (document.getElementById("q4_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+
+          if (document.getElementById("q5_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+
+          if (document.getElementById("q6_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q7_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q8_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q9_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q10_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q11_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q12_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+          if (document.getElementById("q13_yes").checked) {
+            buyCount++;
+          } else {
+            dontBuyCount++;
+          }
+
+          // Add the rest of the questions here
+
+          // Determine the result
+          let result = buyCount > dontBuyCount ? "BUY" : "DON'T BUY";
+          alert("Result: " + result);
+        });
+    </script>
+  </body>
+</html>
